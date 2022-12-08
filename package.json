@@ -1,0 +1,13 @@
+{
+  "name": "advent-of-code-2022",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "day-1": "node day-1/day-1.js",
+    "day-2": "node day-2/day-2.js",
+    "day-3": "node day-3/day-3.js",
+    "day-4": "node day-4/day-4.js",
+    "day-5": "node day-5/day-5.js"
+  },
+  "author": "Brian Maher"
+}
