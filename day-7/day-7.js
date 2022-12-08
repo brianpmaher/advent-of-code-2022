@@ -49,6 +49,7 @@ for (const line of lines) {
 }
 
 const directoriesUnder100000 = [];
+const allDirectories = [];
 
 const calculateTotalSizes = (directory) => {
   const directories = Object.keys(directory.directories);
@@ -72,10 +73,17 @@ const calculateTotalSizes = (directory) => {
     directoriesUnder100000.push(directory);
   }
 
+  allDirectories.push(directory);
+
   return sum;
 };
 
-calculateTotalSizes(fileTree);
+const totalUsedDiskSpace = calculateTotalSizes(fileTree);
 
 console.log('part 1', directoriesUnder100000.reduce((sum, directory) => sum + directory.size, 0));
 
+const totalDiskSpace = 70000000;
+const updateSize = 30000000;
+const spaceNeedingToClear = updateSize - (totalDiskSpace - totalUsedDiskSpace);
+
+console.log('part 2', allDirectories.filter(directory => directory.size > spaceNeedingToClear).sort((a, b) => a.size - b.size)[0].size);
