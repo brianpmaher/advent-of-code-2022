@@ -10,7 +10,8 @@
     "day-5": "node day-5/day-5.js",
     "day-6": "node day-6/day-6.js",
     "day-7": "node day-7/day-7.js",
-    "day-8": "node day-8/day-8.js"
+    "day-8": "node day-8/day-8.js",
+    "day-9": "node day-9/day-9.js"
   },
   "author": "Brian Maher"
 }
